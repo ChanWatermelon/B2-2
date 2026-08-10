@@ -287,7 +287,7 @@ INPUT 쪽이 `{"summary":"…","sentiment":"긍정","keywords":[…]}` 형태의
 
 **실행 결과**
 
-![Notion 저장 모듈 출력](../image/notion.png)
+![Notion 저장 모듈 출력](notion.png)
 
 - `Object: page` / `Database Item ID`가 반환됐습니다. **Notion에 페이지가 실제로 생성됐다는 API 차원의 증거**입니다.
 - `In trash: false`, `is_archived: false` — 정상 상태로 저장됐습니다.
