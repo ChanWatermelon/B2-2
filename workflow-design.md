@@ -5,7 +5,7 @@
 
 ## 1. 전체 구조
 
-![Make 시나리오 전체 구조](../01-scenario-overview.png)
+![Make 시나리오 전체 구조](01-scenario-overview.png)
 
 
 ## 2. 데이터 흐름 한 줄 요약
@@ -53,7 +53,7 @@ Make에서 스케줄은 별도 모듈이 아니라 **시나리오 속성**입니
 
 **실행 결과**
 
-![RSS 모듈 출력](../image/rss.png)
+![RSS 모듈 출력](rss.png)
 
 기사 1건이 bundle 1개로 만들어진 모습입니다. 이후 모든 모듈이 이 bundle 하나를 넘겨받아 순차 처리합니다.
 
@@ -95,7 +95,7 @@ Make에서 스케줄은 별도 모듈이 아니라 **시나리오 속성**입니
 
 **실제 설정**
 
-![Set multiple variables 설정](../image/tools.png)
+![Set multiple variables 설정](tools.png)
 
 **왜 URL 자체가 아니라 해시인가**
 ① URL은 길이 제한이 없고 쿼리 파라미터(`?utm_source=...`)가 붙으면 같은 기사인데 다른 문자열이 됩니다. ② 해시는 항상 64자 고정이라 Notion 텍스트 속성에서 비교가 안정적입니다. ③ 과제 요구사항이 명시한 "원문 링크 해시" 방식에 그대로 해당합니다.
@@ -169,7 +169,7 @@ Make에서 스케줄은 별도 모듈이 아니라 **시나리오 속성**입니
 
 **실행 결과**
 
-![Create JSON 모듈 출력](../image/json.png)
+![Create JSON 모듈 출력](json.png)
 
 이 모듈이 왜 필요한지가 출력에 그대로 드러납니다.
 
