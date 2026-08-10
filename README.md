@@ -14,7 +14,7 @@ RSS로 기술 뉴스를 수집해 Gemini로 3줄 요약한 뒤 Notion 데이터�
 |---|---|---|
 | 자동화 엔진 | Make (구 Integromat) | 모듈 8개 + 필터 2개 |
 | 데이터 소스 | 전자신문 IT RSS (`https://rss.etnews.com/03.xml`) | 2026-08-10 동작 확인 |
-| 생성형 AI | Google Gemini API (`gemini-2.5-flash`) | thinking 비활성 · 구조화 출력 |
+| 생성형 AI | Google Gemini API (`gemini-3.6-flash`) | thinking 비활성 · 구조화 출력 |
 | 저장소 | Notion Database | 액세스 토큰(Internal) 연동, Data Source API |
 
 **구축 상태** — 2026-08-10 end-to-end 동작 확인 완료. RSS 수집 → 필터 → 중복 체크 → Gemini 요약·감성분석 → Notion 저장까지 전 구간이 사람 개입 없이 실행됩니다. 실전 전환에 남은 작업은 §6-2를 참고하세요.
@@ -54,7 +54,14 @@ RSS로 기술 뉴스를 수집해 Gemini로 3줄 요약한 뒤 Notion 데이터�
   - 감성 태그가 `긍정 / 중립 / 부정` 중 하나로 반환됨
   - JSON 응답 구조가 정상적으로 유지됨
   - 실제 RSS 기사로 테스트 후 Make 실행 결과 스크린샷 확보
----
+-------------------------------------------------------------
+- **테스트 결과:**
+  - 전자신문 RSS 기사 1건을 입력하여 Gemini 실행 성공
+  - `summary`가 3개 항목으로 구조화되어 출력됨
+  - `sentiment`가 `중립`으로 정상 반환됨
+  - 요약 + 감성분석을 Gemini API 1회 호출로 처리
+  - 실제 사용 모델: `gemini-3.6-flash`
+  - Make 실행 결과 스크린샷 확보
 
 ## 2. 주제 필터링 기준
 
