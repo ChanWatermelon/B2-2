@@ -5,7 +5,7 @@
 
 ## 1. 전체 구조
 
-![Make 시나리오 전체 구조](../image/01-scenario-overview.png)
+![Make 시나리오 전체 구조](../01-scenario-overview.png)
 
 
 ## 2. 데이터 흐름 한 줄 요약
